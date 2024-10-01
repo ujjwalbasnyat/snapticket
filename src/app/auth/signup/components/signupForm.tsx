@@ -1,5 +1,5 @@
 import React from "react";
 
 export default function SignupForm() {
-	return <div>welcome to signupForm</div>;
+	return <div>Welcome to SignupForm!</div>;
 }
