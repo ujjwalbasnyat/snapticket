@@ -2,3 +2,40 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+@layer base {
+	body {
+		font-family: 'Roboto', sans-serif;
+	}
+	:root {
+		--background: #ffffff;
+		--foreground: #000000;
+		--color-primary: #1E3A8A;
+		--color-secondary:#F3F4F6;
+		--color-accent:#1E3A8A;
+		--ring:#1E3A8A;
+		--h1-color:var(--color-primary)
+		--input-background:var(--color-secondary)
+		--input-placeholder: #4B5563;
+		--border:var(--color-primary)
+		--footer-background: #14265A;
+		--card-shadow:#000000;
+		--button-hover: #14265A;
+		--button-text:#ffffff;
+		--button-radius: 0.3125rem;
+		--card-radius:0.625rem;
+		--font-medium:1.5rem;
+		--font-large:3rem;
+		--font-small:0.875rem;
+		--font-button:1.125rem;
+		--font-weight-extrabold: 900;
+		--font-weight-normal: 400;
+		--font-weight-semibold:600;
+	}
+	
+	.dark{
+
+	}
+
+}
