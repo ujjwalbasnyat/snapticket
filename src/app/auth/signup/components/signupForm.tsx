@@ -1,5 +1,9 @@
+"use client";
 import React from "react";
 import Link from "next/link";
+import { useState } from "react";
+import { FaRegEyeSlash } from "react-icons/fa";
+import { IoEyeOutline } from "react-icons/io5";
 
 export default function SignupForm() {
   return (
@@ -42,6 +46,7 @@ export default function SignupForm() {
               placeholder="password"
               className="bg-blue-100 m-3 rounded-md p-2"
             />
+
             <input
               type="password"
               placeholder="Confirm password"
