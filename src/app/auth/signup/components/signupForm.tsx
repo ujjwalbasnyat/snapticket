@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 "use client";
 import React from "react";
 import Link from "next/link";
@@ -77,4 +78,10 @@ export default function SignupForm() {
       </div>
     </div>
   );
+=======
+import React from "react";
+
+export default function SignupForm() {
+	return <div>Welcome to SignupForm!</div>;
+>>>>>>> 10327e3adc3ca4e1342f3d732f33fe86488e3fe9
 }
