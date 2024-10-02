@@ -32,6 +32,9 @@
 		--font-weight-extrabold: 900;
 		--font-weight-normal: 400;
 		--font-weight-semibold:600;
+		--form-height:30rem;
+		--form-width:45rem;
+		--form-input-width:22rem;
 	}
 	
 	.dark{

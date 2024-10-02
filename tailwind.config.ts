@@ -8,6 +8,14 @@ const config: Config = {
   ],
   theme: {
 		extend: {
+			height: {
+				formheight: "var(--form-height)",
+				
+			},
+			width: {
+				formwidth: "var(--form-width)",
+				inputwidth: "var(--form-input-width)"
+			},
 			fontWeight: {
 				normal: "var(--font-weight-normal)",
 				semibold:"var(--font-weight-semibold)",
@@ -15,10 +23,10 @@ const config: Config = {
 
 			},
 			fontSize: {
-				'button': 'var(--font-button)',
-				'small': 'var(--font-small)',
-				'medium': 'var(--font-medium)',
-				'large': 'var(--font-large)',
+				'btn': 'var(--font-button)',
+				'sm': 'var(--font-small)',
+				'md': 'var(--font-medium)',
+				'lg': 'var(--font-large)',
 			},
 			borderRadius: {
 				sm: "var(--button-radius)",
@@ -37,6 +45,7 @@ const config: Config = {
 				ring: "var(--ring)",
 				hover: "var(--button-hover)",
 				placeholder: "var(--input-placeholder)",
+				
 
       },
     },
