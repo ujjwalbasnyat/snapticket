@@ -1,87 +1,109 @@
-<<<<<<< HEAD
 "use client";
-import React from "react";
+
+import React, { use, useState } from "react";
 import Link from "next/link";
-import { useState } from "react";
-import { FaRegEyeSlash } from "react-icons/fa";
-import { IoEyeOutline } from "react-icons/io5";
+import InputField from "./InputField"; // Adjust the import path as necessary
+import PasswordField from "./PasswordField"; // Adjust the import path as necessary
+import { FcGoogle } from "react-icons/fc";
 
 export default function SignupForm() {
+  const [formData, setFormData] = useState({
+    firstName: "",
+    lastName: "",
+    phoneNumber: "",
+    email: "",
+    password: "",
+    confirmPassword: "",
+  });
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const { name, value } = e.target;
+    setFormData((prevData) => ({
+      ...prevData,
+      [name]: value,
+    }));
+  };
+
   return (
     <div className="min-h-screen flex justify-center items-center">
-      <div className="flex w-400 sm:100 h-400 shadow-md  transform translate-y-[-40%] rounded-lg">
-        <div className="w-1/3 bg-blue-900 text-white flex flex-col	 justify-center items-center rounded-l-lg">
-          <h2 className="text-4xl">SnapTicket</h2>
-          <p>
-            Your Journy <br /> Starts Here
-          </p>
+      <div className="flex w-400 h-400 shadow-md transform translate-y-[-20%] rounded-lg">
+        <div className="w-1/3 bg-blue-900 text-white flex flex-col justify-center items-center rounded-l-lg">
+          <h2 className="text-4xl font-bold">SnapTicket</h2>
+          <p>Your Journey Starts Here</p>
         </div>
-
-        <div className="w-2/3">
-          <div className="tx-4xl ">
-            <h2 className="pl-10">Sign Up</h2>
-          </div>
-          <div className=" grid grid-cols-2 w-full">
-            <input
+        <div className="w-2/3 p-5">
+          <h2 className="text-2xl font-bold pl-3">Sign Up</h2>
+          <div className="grid grid-cols-2 gap-3">
+            <InputField
               type="text"
+              name="firstName"
               placeholder="First Name"
-              className="bg-blue-100 m-3 rounded-md p-2"
+              value={formData.firstName}
+              onChange={handleChange}
             />
-            <input
+            <InputField
               type="text"
+              name="lastName"
               placeholder="Last Name"
-              className="bg-blue-100 m-3 rounded-md p-2"
+              value={formData.lastName}
+              onChange={handleChange}
             />
-            <input
+            <InputField
               type="text"
-              placeholder="Phone Nuber"
-              className="bg-blue-100 m-3 rounded-md p-2 "
+              name="phoneNumber"
+              placeholder="Phone Number"
+              value={formData.phoneNumber}
+              onChange={handleChange}
             />
-            <input
+            <InputField
               type="text"
+              name="email"
               placeholder="Email Address"
-              className="bg-blue-100 m-3 rounded-md p-2"
+              value={formData.email}
+              onChange={handleChange}
             />
-            <input
-              type="password"
-              placeholder="password"
-              className="bg-blue-100 m-3 rounded-md p-2"
+            <PasswordField
+              name="password"
+              placeholder="Password"
+              value={formData.password}
+              onChange={handleChange}
             />
-
-            <input
-              type="password"
-              placeholder="Confirm password"
-              className="bg-blue-100 m-3 rounded-md p-2"
+            <PasswordField
+              name="confirmPassword"
+              placeholder="Confirm Password"
+              value={formData.confirmPassword}
+              onChange={handleChange}
             />
           </div>
-          <div className="text-blue-800 ml-5">
-            <input type="checkbox" />
-            <label htmlFor="" className="ml-2">
+
+          <div className="text-blue-800 mt-3">
+            <input type="checkbox" id="remember" />
+            <label htmlFor="remember" className="ml-2">
               Remember Password?
             </label>
           </div>
-          <div className="m-5 flex flex-col justify-center items-center">
-            <button
-              type="submit"
-              className="bg-blue-900 text-white w-full p-1 rounded-md"
-            >
-              Create Your Account.
-            </button>
-            <p className="m-4">
-              Already Have an accout.{" "}
-              <Link href="/auth/login" className="text-blue-900 font-bold">
-                Login
-              </Link>
-            </p>
+
+          <button
+            type="submit"
+            className="bg-blue-900 text-white w-full py-2 mt-4 rounded-md"
+          >
+            Create Your Account
+          </button>
+
+          <p className="mt-4">
+            Already have an account?{" "}
+            <Link href="/auth/login" className="text-blue-900 font-bold">
+              Login
+            </Link>
+          </p>
+          <div className="flex gap-2 items-center p-l-5 m-2">
+            <FcGoogle />
+            <a href="#" className="hover:text-primary hover:underline">
+              Login with Google
+            </a>
           </div>
         </div>
       </div>
     </div>
   );
-=======
-import React from "react";
-
-export default function SignupForm() {
-	return <div>Welcome to SignupForm!</div>;
->>>>>>> 10327e3adc3ca4e1342f3d732f33fe86488e3fe9
 }
