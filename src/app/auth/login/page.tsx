@@ -1,5 +1,6 @@
 import LoginForm from "./components/loginForm";
 import { FcGoogle } from "react-icons/fc";
+import Link from "next/link";
 
 export default function Login() {
 	return (
@@ -25,9 +26,9 @@ export default function Login() {
 							</div>
 							<p>
 								Are you new?{" "}
-								<a href="#" className="underline text-primary hover:text-hover">
+								<Link href="/auth/signup" className="underline text-primary hover:text-hover">
 									Create an Account
-								</a>
+								</Link>
 							</p>
 						</div>
 					</div>

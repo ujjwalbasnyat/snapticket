@@ -15,10 +15,10 @@
 		--color-secondary:#F3F4F6;
 		--color-accent:#1E3A8A;
 		--ring:#1E3A8A;
-		--h1-color:var(--color-primary)
-		--input-background:var(--color-secondary)
+		--h1-color:var(--color-primary);
+		--input-background:var(--color-secondary);
 		--input-placeholder: #4B5563;
-		--border:var(--color-primary)
+		--border:var(--color-primary);
 		--footer-background: #14265A;
 		--card-shadow:#000000;
 		--button-hover: #14265A;
