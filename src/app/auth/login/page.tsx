@@ -2,6 +2,22 @@ import LoginForm from "./components/loginForm";
 import { FcGoogle } from "react-icons/fc";
 
 export default function Login() {
+<<<<<<< HEAD
+  return (
+    <div>
+      Welcome Login!.
+      <LoginForm />
+      <p>or</p>
+      <div>
+        <FcGoogle />
+        <a href="#">Login with Google</a>
+      </div>
+      <p>
+        Are you new? <a href="#">Create an Account</a>
+      </p>
+    </div>
+  );
+=======
 	return (
 		<div className="flex my-10 justify-center items-center">
 			<div className="bg-background flex  h-formheight w-formwidth rounded-md border">
@@ -35,4 +51,5 @@ export default function Login() {
 			</div>
 		</div>
 	);
+>>>>>>> 10327e3adc3ca4e1342f3d732f33fe86488e3fe9
 }

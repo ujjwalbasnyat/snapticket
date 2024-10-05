@@ -5,12 +5,12 @@ import { IoEyeOutline } from "react-icons/io5";
 
 export default function LoginForm() {
 	const [showPassword, setShowPassword] = useState(false);
-	const [passwordData, setPasswordData] = useState();
+	const [passwordData, setPasswordData] = useState("");
 
 	const handleVisibility = () => {
 		setShowPassword(!showPassword);
 	};
-	const handleInput = (e) => {
+	const handleInput = (e: React.ChangeEvent<HTMLInputElement>) => {
 		setPasswordData(e.target.value);
 	};
 	return (
