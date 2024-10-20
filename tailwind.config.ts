@@ -27,6 +27,11 @@ const config: Config = {
 				'sm': 'var(--font-small)',
 				'md': 'var(--font-medium)',
 				'lg': 'var(--font-large)',
+				'btn-default': '1rem',
+				'btn-sm': '0.875rem',
+				'btn-lg': '1.25rem',
+				'tag' : '0.8rem',
+				'footertext' : '1rem',
 			},
 			borderRadius: {
 				sm: "var(--button-radius)",
@@ -45,9 +50,17 @@ const config: Config = {
 				ring: "var(--ring)",
 				hover: "var(--button-hover)",
 				placeholder: "var(--input-placeholder)",
+				checkmark: "#23F900",
 				
 
       },
+
+			padding: {
+				'btn-default': '0.75rem 1.5rem', //px-6 py-3
+				'btn-sm': '0.5rem 1rem', //px-4 py-2
+				'btn-lg': '1rem 2rem', // px-8 py-4
+		},
+	  
     },
   },
   plugins: [],
