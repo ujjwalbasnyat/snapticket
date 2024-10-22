@@ -3,7 +3,7 @@ import { FaRegEyeSlash } from "react-icons/fa";
 import { IoEyeOutline } from "react-icons/io5";
 
 interface PasswordFieldProps {
-  name: string; // Include the name prop
+  name: string;
   placeholder: string;
   value: string;
   onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
@@ -22,19 +22,19 @@ const PasswordField: React.FC<PasswordFieldProps> = ({
   };
 
   return (
-    <div className="relative">
+    <div className="relative w-full max-w-md mx-auto">
       <input
         type={showPassword ? "text" : "password"}
-        name={name} // Bind the name prop to the input
+        name={name}
         placeholder={placeholder}
         value={value}
         onChange={onChange}
-        className="bg-blue-100 m-3 rounded-md p-2 w-full"
+        className="bg-blue-100 m-3 rounded-md p-2 w-full pr-12" // added pr-12 to make space for the button
       />
       <button
         type="button"
         onClick={handleVisibility}
-        className="absolute right-2 top-2"
+        className="absolute right-3 top-1/2 transform -translate-y-1/2 p-2 text-gray-600"
       >
         {showPassword ? <FaRegEyeSlash /> : <IoEyeOutline />}
       </button>

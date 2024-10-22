@@ -13,31 +13,32 @@ export default function LoginForm() {
   const handleInput = (e: React.ChangeEvent<HTMLInputElement>) => {
     setPasswordData(e.target.value);
   };
+
   return (
     <div>
       <div className="flex flex-col gap-5">
         <input
           type="text"
           placeholder="Email or Phone Number"
-          className=" p-2 w-inputwidth bg-secondary focus:outline-none focus:ring-1 ring-ring rounded-sm "
+          className="p-2 w-inputwidth bg-secondary focus:outline-none focus:ring-1 ring-ring rounded-sm"
         />
-        <div>
+        <div className="relative">
           <input
             type={showPassword ? "text" : "password"}
             placeholder="Password"
-            className=" p-2 w-inputwidth bg-secondary focus:outline-none focus:ring-1 ring-ring rounded-sm "
+            className="p-2 w-inputwidth bg-secondary focus:outline-none focus:ring-1 ring-ring rounded-sm pr-10"
             value={passwordData}
             onChange={handleInput}
           />
-          <div className="absolute inset-y-60   ">
+          <div className="absolute inset-y-0 right-2 flex items-center cursor-pointer">
             {showPassword ? (
-              <FaRegEyeSlash onClick={handleVisibility} />
+              <FaRegEyeSlash size={20} />
             ) : (
-              <IoEyeOutline onClick={handleVisibility} />
+              <IoEyeOutline size={20} />
             )}
           </div>
 
-          <div className="flex gap-10 space-x-20">
+          <div className="flex gap-10 space-x-20 mt-2">
             <section className="flex gap-1">
               <input type="checkbox" />
               <p className="">Remind me</p>
@@ -45,10 +46,7 @@ export default function LoginForm() {
             <p className="text-primary">Forget Password?</p>
           </div>
         </div>
-        <button
-          type="submit"
-          className="bg-accent text-btntext p-2 rounded-sm hover:bg-hover"
-        >
+        <button className="bg-accent text-btntext p-2 rounded-sm hover:bg-hover">
           Login
         </button>
       </div>
