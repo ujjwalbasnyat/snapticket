@@ -1,5 +1,7 @@
 import React from "react";
 
-export default function Flights() {
-	return <div>Flights</div>;
+function page() {
+  return <div>Flight</div>;
 }
+
+export default page;
