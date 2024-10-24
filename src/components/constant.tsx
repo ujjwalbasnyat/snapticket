@@ -21,7 +21,7 @@ export const    NavData : NavItem[] = [
         path: "/flights"
     },
     {
-        name : "Taxis",
+        name : "Jeep",
         icon: <MdOutlineLocalTaxi/>,
         path: "/taxis"
     },
@@ -31,3 +31,5 @@ export const mainHeadline = "Your Journey Start Here";
 export const subHeadline = "All your travel in one place just a click away";
 
 export const transportOptions = ['Bus', 'Flight', 'Taxi']
+
+export const datepicker = ['24 Thu', '25 Fri', '26 Sat', '27 Sun', '28 Mon']
