@@ -64,7 +64,7 @@ function Footer() {
 	<div className="bg-primary grid md:grid-cols-5 p-10 ">
 	<ul className="flex flex-col items-center gap-5">
 		<li className="flex flex-col justify-center items-center"><Image src={myLogo} alt="logo" style={{width:50, height:70}}/>
-		<p className="font-semibold flex"><section className="text-black">Snap</section><section className="text-background">Ticket</section></p> <p className="text-background ">Your Journey Start Here</p></li>
+		<div className="font-semibold flex"><div className="text-black">Snap</div><div className="text-background">Ticket</div></div> <div className="text-background ">Your Journey Start Here</div></li>
 		<div className="text-background"><li>Enquiry:</li><li>support@snapticket.com</li></div>
 	</ul>
 	<ul className="text-background">

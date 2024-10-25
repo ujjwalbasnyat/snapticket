@@ -6,6 +6,9 @@ import { datepicker } from "@/components/constant";
 import { IoMdArrowDropdown } from "react-icons/io";
 import { MdOutlineAirlineSeatReclineExtra } from "react-icons/md";
 import Plane from '../../../../public/images/myPlane.png';
+import { TicketsNavigation } from "./navigation";
+import { Filters } from "./filters";
+import { Cards } from "./cards";
 
 
 export default function Flights() {
@@ -37,7 +40,7 @@ export default function Flights() {
 			}
 		}
 		return(
-			<div className="flex justify-between">
+			<div className="flex justify-between text-tag">
 				<div className="flex gap-2">
 					<strong>Adult</strong>
 					<p>12 yrs & above</p>
@@ -62,12 +65,12 @@ export default function Flights() {
 		}
 	}
 		return(
-			<div>
+			<div className="flex justify-between text-tag">
 				<div className="flex gap-2">
 					<strong>Child</strong>
 					<p>12 yrs & below</p>
 				</div>
-				<div className=" flex justify-between items-center outline outline-1 outline-secondary rounded-sm">
+				<div className="flex justify-between items-center outline outline-1 outline-secondary rounded-sm">
 				<button onClick={decrement2}><BiMinus/></button>
 				<div className="bg-secondary px-3">{count2}</div>
 				<button onClick={increment2}><GoPlus/></button>
@@ -79,17 +82,18 @@ export default function Flights() {
 	const TotalSum = count + count2;
 
 	return(
-		<div className="p-10  bg-center bg-no-repeat" style={{backgroundImage: `url(${Plane.src})`}}>
-			<div className="grid grid-cols-1 mx-10 justify-center md:outline md:outline-1 md:outline-black-600 my-5 rounded-sm">
+		<div className="mb-20">
+			<div className="p-10  bg-center bg-no-repeat" style={{backgroundImage: `url(${Plane.src})`}}>
+			<div className="grid grid-cols-1 mx-10 justify-center  my-10 py-10 rounded-sm">
 				
 				<div className=" bg-background  rounded-sm grid grid-rows-1">
-					<div className="flex gap-6  items-center">
+					<div className="flex gap-6  items-center pt-5 px-10">
 					<form className="flex gap-6">
 						<label><input type = "radio" name = "n_way" id = "one_way" value = "One Way" />One Way</label>
 						<label><input type = "radio" name = "n_way" id = "two_way" value = "Two Way"/>Two way</label>
 					</form>
 						<div>
-							<div className="absolute top-20 outline outline-1 outline-black-600 p-5 rounded-sm bg-background z-30">{showCounter && <Counter/>} {showCounter && <SecondCounter/>}</div>
+							<div className="absolute top-[23%] outline outline-1 outline-black-600 px-4 py-2 flex flex-col gap-3 rounded-sm bg-background z-30">{showCounter && <Counter/>} {showCounter && <SecondCounter/>}</div>
 							<button onClick={handleClick} className=" bg-secondary px-6 py-2 flex items-center justify-between"><MdOutlineAirlineSeatReclineExtra/><div>{TotalSum} Passenger</div><IoMdArrowDropdown/></button>
 						</div>
 					</div>
@@ -111,5 +115,23 @@ export default function Flights() {
 				</div>
 			</div>
 		</div>
+		<TicketsNavigation />
+		<div className="grid grid-cols-1 md:grid-cols-3 mx-20 gap-10">
+			<div className="col-span-2 grid grid-cols-1 gap-3">
+				
+				<Cards />
+				<Cards />
+				<Cards />
+				<Cards />
+				
+			</div>
+			<div className="col-span-1"><Filters /></div>
+		</div>
+		</div>
 	)
 }
+
+
+
+
+

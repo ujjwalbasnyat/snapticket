@@ -33,3 +33,27 @@ export const subHeadline = "All your travel in one place just a click away";
 export const transportOptions = ['Bus', 'Flight', 'Taxi']
 
 export const datepicker = ['24 Thu', '25 Fri', '26 Sat', '27 Sun', '28 Mon']
+
+
+export const imageData = [
+    {
+        name: "Bhaktapur",
+        img: '/images/bhaktapur.jpg',
+    },
+    {
+        name: "Illam",
+        img: '/images/illam.jpg',
+    },
+    {
+        name: "Kalinchowk",
+        img: '/images/kalinchowk.jpeg',
+    },
+    {
+        name: "Pokhara",
+        img: '/images/pokhara.webp',
+    },
+    {
+        name: "Kathmandu",
+        img: '/images/ktm.jpg',
+    },
+]
