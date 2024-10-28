@@ -1,6 +1,7 @@
 import LoginForm from "./components/loginForm";
 import { FcGoogle } from "react-icons/fc";
 import Link from "next/link";
+import {mainHeadline} from '../../../components/constant';
 
 export default function Login() {
 	return (
@@ -8,7 +9,7 @@ export default function Login() {
 			<div className="bg-background flex  h-formheight w-formwidth rounded-md border">
 				<div className="flex flex-col bg-primary items-center w-1/3 text-background h-full justify-center rounded-tl-md rounded-bl-md ">
 					<p className="text-md font-semibold">SnapTicket</p>
-					<p className=" font-normal">Your journey starts here</p>
+					<p className=" font-normal">{mainHeadline}</p>
 				</div>
 				<div className="m-10">
 					<p className="font-semibold text-md ">Login</p>
